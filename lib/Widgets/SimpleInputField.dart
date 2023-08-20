@@ -50,18 +50,17 @@ class _SimpleInputFieldState extends State<SimpleInputField> {
           ),
 
           onFieldSubmitted: (value){
-            if(value.isEmpty){
+            if(value.isEmpty)
+            {
               widget.controller.text = "0.00";
             }
             widget.controller.text = value.toString();
-            setState((){});
+            setState(() {});
           },
 
           onSaved: (value){
             widget.controller.text = value.toString();
-            setState(() {
-
-            });
+            setState(() {});
           },
 
 

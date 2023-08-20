@@ -118,8 +118,10 @@ class _TipCalculatorState extends State<TipCalculator> {
                   children: [
                     Expanded(
                       child: GestureDetector(
-                        onTap: (){
-                          formKey.currentState!.validate();
+                        onTap: () {
+                          setState(() {
+                            formKey.currentState!.validate();
+                          });
                         },
                         child: Container(
                           margin: const EdgeInsets.only(top: 10),
@@ -137,7 +139,10 @@ class _TipCalculatorState extends State<TipCalculator> {
                     const SizedBox(width: 10,),
 
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
+                        setState(() {
+                          formKey.currentState!.validate();
+                        });
                       },
                       child: Container(
                         margin: const EdgeInsets.only(top: 10),
